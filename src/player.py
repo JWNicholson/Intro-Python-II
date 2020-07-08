@@ -10,4 +10,4 @@ class Player:
         self.current_room = current_room
 
     def __repr__(self):
-        return f'Name: {self.name}, Current Room: {self.current_room}' 
+        return f'Player: {self.name}, Current Room: {self.current_room}' 
