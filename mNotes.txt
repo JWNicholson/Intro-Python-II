@@ -5,10 +5,29 @@ adv.py contains input and logic
     needs imports - from room import Room, from player import Player
 
 player.py contains Player class/constructor
-    constructor - self, name, current_location
+    constructor - self, name, current_room
         func to return readable name and current room 
 
 room.py contains Room class/constructor
     constructor - self, name, description
                 additional - n_to, s_to, e_to, w_to
                 func  __str__ to get string representation of object (maybe __repr__ ?)
+https://dbader.org/blog/python-repr-vs-str
+
+
+adv.py - 
+    player object in outside room
+
+    print current room name
+    print description of room
+
+    playerMove direction per input
+        if no room in that direction - feedback msg:else player move current_room to x_to
+        n_to
+        s_to
+        e_to
+        w_to
+
+    q to quit
+        feedback msg
+
