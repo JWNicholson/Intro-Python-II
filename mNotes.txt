@@ -1,0 +1,14 @@
+Game logic - Player inputs direction to go at prompts.
+             Player input stored in variable (player.location ?)
+
+adv.py contains input and logic
+    needs imports - from room import Room, from player import Player
+
+player.py contains Player class/constructor
+    constructor - self, name, current_location
+        func to return readable name and current room 
+
+room.py contains Room class/constructor
+    constructor - self, name, description
+                additional - n_to, s_to, e_to, w_to
+                func  __str__ to get string representation of object (maybe __repr__ ?)
