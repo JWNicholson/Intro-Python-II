@@ -45,13 +45,66 @@ print(player)
 # Write a loop that:
 #
 # * Prints the current room name
-print(f"Current Room - {player.current_room.name}")
+print(f"Current Room: {player.current_room.name}")
 
 # * Prints the current description (the textwrap module might be useful here).
+print(f"Description: {player.current_room.description}")
 # * Waits for user input and decides what to do.
-#
+direction = input("Choose dirction to go - n(north), s(south), e(east), w(west), q to quit the game - ")
+
 # If the user enters a cardinal direction, attempt to move to the room there.
-# Print an error message if the movement isn't allowed.
+def playerMove(direction):
+    if direction =="n":
+        # If there is no room to the north
+        if player.current_room.n_to is None:
+            # Print an error message if the movement isn't allowed.
+            print("There's nothing in that direction.")
+            print("==================================")
+            print(player)
+           
+        else:
+             player.current_room = player.current_room.n_to
+             print(player)
+             print("**************************************")
+
+    elif direction =="s":
+        # If there is no room to the north
+        if player.current_room.s_to is None:
+            # Print an error message if the movement isn't allowed.
+            print("There's nothing in that direction.")
+            print(player)
+            print("==================================")
+        else:
+             player.current_room = player.current_room.s_to
+             print("**************************************")
+
+    elif direction =="e":
+        if player.current_room.e_to is None:
+           print("There's nothing in that direction.")
+           print(player)
+           print("==================================")
+        else:
+            player.current_room = player.current_room.e_to
+            print(player)
+            print("**************************************")
+
+    elif direction =="w":
+        if player.current_room.w_to is None:
+            print("There's nothing in that direction.")
+            print(player)
+            print("==================================")
+        else:
+            player.current_room = player.current_room.w_to
+            print(player)
+            print("**************************************")
+    
+    elif direction == "q":
+        print("Leaving so soon? Bye...")
+
+
+playerMove(direction)
+           
+
 #
 # If the user enters "q", quit the game.
 
