@@ -1,11 +1,12 @@
 from room import Room
 from player import Player
+from items import Items
 
 # Declare all the rooms
 
 room = {
     'outside':  Room("Outside Cave Entrance",
-                     "North of you, the cave mount beckons"),
+                     "North of you, the cave mount beckons. You see the following:" [item['torch'], item['knife']]),
 
     'foyer':    Room("Foyer", """Dim light filters in from the south. Dusty
 passages run north and east."""),
@@ -23,6 +24,12 @@ earlier adventurers. The only exit is to the south."""),
 }
 
 #declare items
+items = {
+    "knife": Items("knife", "USMC issue K-Bar"),
+    "torch": Items("torch", "Puts light on the area"),
+    "rope": Items("rope", "Use it to climb or rapell"),
+    "coins": Items("coins", "Buy stuff or buy your way out of trouble")
+}
 
 
 # Link rooms together
@@ -41,7 +48,7 @@ room['treasure'].s_to = room['narrow']
 #
 
 # Make a new player object that is currently in the 'outside' room.
-player = Player("Vik", room['outside'])
+player = Player("Fu", room['outside'])
 print(player)
 
 # Write a loop that:
