@@ -30,4 +30,25 @@ adv.py -
 
     q to quit
         feedback msg
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+make rooms to hold multiple items
+item.py -
+    constructor self, name, description
+        func return  item name and description
+        on_take msg "you picked up" {item}
+        on_drop msg "you drop your" {item}
+
+player.py -
+    constructor self name room - add inventory[]
+        func return {player name} is in {room}
+        func pickup (item)
+        func drop_item
+
+adv.py -
+Consider refactoring playerMove if statements...
+
+?? -- __dict__ method - 
+https://docs.python.org/3/reference/datamodel.html
+https://www.tutorialspoint.com/What-does-built-in-class-attribute-dict-do-in-Python
+
 
