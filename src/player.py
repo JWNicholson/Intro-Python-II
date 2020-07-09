@@ -10,7 +10,7 @@ class Player:
         self.inventory = []
 
     def __repr__(self):
-        return f'Name: {self.name}, Current_Room: {self.current_room}'
+        return f'Name: {self.name}, Current_Room: {self.current_room}, Inventory: {self.inventory}'
 
     def take(self, item):
         if item == -1:

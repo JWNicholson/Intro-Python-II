@@ -68,18 +68,22 @@ print(f"{playerName} is currently in {player.current_room.name}")
 print(f"Description: {player.current_room.description}")
 print(f"Items in this room: {player.current_room.roomItemsList}")
 
+playerInventory = print(f"Inventory for you: {player.inventory}")
+
 #  Waits for user input and decides what to do.
 # direction = input("Choose dirction to go - n(north), s(south), e(east), w(west), q to quit the game - ")
 #
 # If the user enters "q", quit the game.
 
 while True:
+  
     itemDrop = input(
         "Do you want to drop an item from your inventory? enter 0 for NO, or the item number-1, 2,...etc ")
     player.drop(int(itemDrop)-1)
     item = input(
         "Do you want to take the item in this room? enter 0 for NO, or 1 for yes. ")
     player.take(int(item)-1)
+    print(f"Inventory for you: {playerInventory}")
     direction = input(
         "Which way? enter n for n, s, e, w, or q to quit. ")
     player.movePlayer(direction)
