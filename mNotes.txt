@@ -33,6 +33,7 @@ adv.py -
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 make rooms to hold multiple items
 item.py -
+    items in an array. itemArray sliced to pickup or drop
     constructor self, name, description
         func return  item name and description
         on_take msg "you picked up" {item}
@@ -51,4 +52,13 @@ Consider refactoring playerMove if statements...
 https://docs.python.org/3/reference/datamodel.html
 https://www.tutorialspoint.com/What-does-built-in-class-attribute-dict-do-in-Python
 
+while player is in room msg "you are in" {current_room} "items" {show itemsArray}
 
+shorten if else? -
+    change user input to dynamic "_to"
+
+use sys.exit to close program when player quits
+
+get - player cant pick up same item if in his/her array
+drop - see get
+feedback msgs when pickup or drop item
