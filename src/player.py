@@ -10,16 +10,23 @@ class Player:
         self.current_room = current_room
         self.inventory = []
        
-
-    #show item array
-
-
-
-    #pickup item 
-    #roomItems is an array
-
-
-    #remove item
-
     def __repr__(self):
         return f'Player: {self.name}, Current Room: {self.current_room}' 
+
+#pick up item
+    def get(self, item):
+        if item == -1:
+            print("So, you take nothing.")
+            return
+        else:
+            self.inventory.append(self.current_room.itemsList[item])
+            print("You pick up the item")
+
+#drop item
+    def drop(self, droppedItem):
+        pass
+
+# player movements (refactor and move here from adv.py)
+
+
+     

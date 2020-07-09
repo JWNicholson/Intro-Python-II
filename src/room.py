@@ -26,8 +26,8 @@ class Room:
 
 
 #add items to list
-    def addItems(self, items):
-        return self.roomItems.append(items)
+    def addRoomItems(self, item):
+        return self.roomItems.append(item)
 
 
 

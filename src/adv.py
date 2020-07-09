@@ -27,10 +27,17 @@ earlier adventurers. The only exit is to the south."""),
 items = {
     "knife": Items("knife", "USMC issue K-Bar"),
     "torch": Items("torch", "Puts light on the area"),
-    "rope": Items("rope", "Use it to climb or rapell"),
-    "coins": Items("coins", "Buy stuff or buy your way out of trouble")
+    "rope": Items("rope", "Use it to climb or rapel"),
+    "coins": Items("coins", "Buy stuff or buy your way out of trouble"),
+    "spellbook": Items("spell book", "You know what to do...")
 }
 
+# add items to rooms
+# room['oustside'].addRoomItems('torch')
+# room['foyer'].addRoomItems('coins')
+# room['overlook'].addRoomItems('rope')
+# room['narrow'].addRoomItems('spellbook')
+# room['treasure'].addRoomItems('knife')
 
 # Link rooms together
 
