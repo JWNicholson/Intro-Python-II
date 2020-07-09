@@ -1,35 +1,23 @@
 # Implement a class to hold room information. This should have name and
 # description attributes.
 
-# class Room
-# constructor self, name, description
-# set n, e, s, w to null
-#return name and description
-
 class Room:
-    def __init__(self, name, description, roomItems=None):
+    def __init__(self, name, description, roomItemsList=None):
         self.name = name
         self.description = description
-        self.roomItems = []
+        self.roomItemsList = []
         self.n_to = None
-        self.s_to = None
         self.e_to = None
+        self.s_to = None
         self.w_to = None
 
+    def onRoomChange(self):
+        print("You are in - ", self.name)
+        print("Description", self.description)
+        print("In here, there is - ", self.roomItemsList)
 
-#show room item(s)
-    def onNewRoom(self):
-    #feedback
-        print("You are in ", self.name)
-        print ("Room Description - ", self.description)
-        print("Items in this room: ", self.roomItems)
-
-
-#add items to list
     def addRoomItems(self, item):
-        return self.roomItems.append(item)
-
-
+        return self.roomItemsList.append(item)
 
     def __repr__(self):
-        return f'{self.name}, Description: {self.description}, Items in room: {self.roomItems}'
+        return (f"{self.name}, Description: {self.description}, Items: {self.roomItemsList}")
