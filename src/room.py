@@ -20,14 +20,14 @@ class Room:
 #show room item(s)
     def onNewRoom(self):
     #feedback
-    print("You are in ", self.name)
-    print ("Description")
-    print("Items in this room: ", self.roomItems)
+        print("You are in ", self.name)
+        print ("Description")
+        print("Items in this room: ", self.roomItems)
 
 
 #add items to list
-    def addItems(self.item):
-    return self.roomItems.append(item)
+    def addItems(self, item):
+        return self.roomItems.append(item)
 
 
 

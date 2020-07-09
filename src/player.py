@@ -5,16 +5,18 @@
 #constructor - self, name, current_location
 #return player name and current_location
 class Player:
-    def __init__(self, name, current_room, itemArr[]):
+    def __init__(self, name, current_room, inventory=[]):
         self.name = name
         self.current_room = current_room
-        self.itemArr = itemArr
+        self.inventory = []
+       
 
     #show item array
 
 
 
-    #pickup item
+    #pickup item 
+    #roomItems is an array
 
 
     #remove item

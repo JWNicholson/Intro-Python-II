@@ -6,7 +6,7 @@ from items import Items
 
 room = {
     'outside':  Room("Outside Cave Entrance",
-                     "North of you, the cave mount beckons. You see the following:" [item['torch'], item['knife']]),
+                     "North of you, the cave mount beckons."),
 
     'foyer':    Room("Foyer", """Dim light filters in from the south. Dusty
 passages run north and east."""),
@@ -48,7 +48,8 @@ room['treasure'].s_to = room['narrow']
 #
 
 # Make a new player object that is currently in the 'outside' room.
-player = Player("Fu", room['outside'])
+playerName = input("What should I call you?")
+player = Player(playerName, room['outside'])
 print(player)
 
 # Write a loop that:
